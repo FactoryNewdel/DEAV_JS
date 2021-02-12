@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Overview</title>
+    <link rel="stylesheet" type="text/css" href="overview.css">
+    <link rel="stylesheet" type="text/css" href="scripts/slickgrid/slick.grid.css"/>
+    <link rel="stylesheet" type="text/css" href="/scripts/slickgrid/css/smoothness/jquery-ui-1.11.3.custom.css"/>
+    <link rel="stylesheet" href="examples.css" type="text/css"/>
+    <link rel="stylesheet" href="realStyles.css" type="text/css"/>
+
+    <script src="scripts/jquery/jquery.js"></script>
+
+    <script src="scripts/slickgrid/lib/jquery-3.1.0.js"></script>
+    <script src="scripts/slickgrid/lib/jquery.event.drag-2.3.0.js"></script>
+    <script src="scripts/slickgrid/lib/jquery-ui.min.js"></script>
+    <script src="scripts/slickgrid/slick.core.js"></script>
+    <script src="scripts/slickgrid/plugins/slick.cellrangedecorator.js"></script>
+    <script src="scripts/slickgrid/plugins/slick.cellrangeselector.js"></script>
+    <script src="scripts/slickgrid/plugins/slick.cellselectionmodel.js"></script>
+    <script src="scripts/slickgrid/slick.formatters.js"></script>
+    <script src="scripts/slickgrid/slick.editors.js"></script>
+    <script src="scripts/slickgrid/slick.grid.js"></script>
+
+    <script src="/scripts/chart/Chart.js"></script>
+    <script src="/scripts/hammer/hammer.js"></script>
+    <script src="/scripts/chartzoom/chartjs-plugin-zoom.js"></script>
+
+    <script type="application/javascript" src="/overview.js"></script>
+</head>
+<body>
+
+
+<div class="">
+    <div class="h-64 w-full flex">
+        <div id="leftDiv" class="flex w-2/3" style="position: relative">
+            <div id="avgGrid" style="width: 100%; height: 10%; display: none"></div>
+            <canvas id="myChart" width="100%" height="80%" style="display: none"></canvas>
+            <div id="selectedValues" style="height: 100%; width: 25%; display: none"></div>
+        </div>
+        <div class="resizer" id="dragMe"></div>
+        <div id="rightDiv" class="flex flex-1">
+            <table style="width:100%; right: 0">
+                <tr>
+                    <td class="border">
+                        <div id="grid" style="width:100%;height:800px;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border">
+                        <table id="pages">
+                            <tr>
+                                <td>
+                                    <button type="button" class="back" id="back" disabled="true">Back</button>
+                                </td>
+                                <td>
+                                    <div id="page"></div>
+                                </td>
+                                <td>
+                                    <button type="button" class="forward" id="forward">Forward</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border">
+                        <button type="button" id="doPlot">Plot</button>
+                        <button type="button" id="doSus">Suspicious</button>
+                        <button type="button" id="doSusAvg">Sus from avg</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border">
+                        <button type="button" id="addValues">Add Values</button>
+                        <button type="button" id="showValues">Show Values</button>
+                        <button type="button" id="clearValues">Clear Values</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border">
+                        <button type="button" id="doAverage">Average</button>
+                        <button type="button" id="doMax">Max</button>
+                        <button type="button" id="doMin">Min</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border">
+                        <button type="button" id="export">Export</button>
+                        <button type="button" id="combine">Combine</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

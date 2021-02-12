@@ -1,0 +1,12 @@
+/* trickster */
+body {
+    text-align: center;
+}
+#dropzone {
+    align-content: center;
+    height: 200px;
+    width: 300px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+}
